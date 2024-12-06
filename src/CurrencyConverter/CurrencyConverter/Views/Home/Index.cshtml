@@ -1,0 +1,49 @@
+﻿@model CurrencyConverter.Models.CurrencyConverterModel
+
+@{
+    ViewData["Title"] = "Currency Converter";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post" asp-action="Convert">
+    <div class="form-group">
+        <label for="Amount">Amount:</label>
+        <input type="number" class="form-control" id="Amount" name="Amount" value="@Model.Amount" />
+    </div>
+
+    <div class="form-group">
+        <label for="OriginCurrency">Origin Currency:</label>
+        @Html.DropDownListFor(
+                 model => model.OriginCurrency,
+                 new SelectList(ViewBag.Currencies as List<string>, "Select Currency"),
+                 "Select Currency",
+                 new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label for="DestinationCurrency">Destination Currency:</label>
+        @Html.DropDownListFor(
+                 model => model.DestinationCurrency,
+                 new SelectList(ViewBag.Currencies as List<string>, "Select Currency"),
+                 "Select Currency",
+                 new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label for="Result">Result:</label>
+        <input type="text" class="form-control" id="Result" name="Result" value="@Model.Result" readonly />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Convert</button>
+    <button type="button" class="btn btn-secondary" onclick="clearForm()">Clear</button>
+</form>
+
+<script>
+    function clearForm() {
+        document.getElementById("Amount").value = "";
+        document.getElementById("OriginCurrency").selectedIndex = 0;
+        document.getElementById("DestinationCurrency").selectedIndex = 0;
+        document.getElementById("Result").value = "";
+    }
+</script>
