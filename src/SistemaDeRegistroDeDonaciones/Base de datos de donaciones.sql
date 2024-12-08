@@ -8,7 +8,7 @@ CREATE TABLE Donantes (
 CREATE TABLE Organizaciones (
     OrganizacionID NUMBER PRIMARY KEY,
     Nombre VARCHAR2(100) NOT NULL,
-    Correo VARCHAR2(100),
+    Direccion VARCHAR2(255),
     Telefono VARCHAR2(15)
 );
 

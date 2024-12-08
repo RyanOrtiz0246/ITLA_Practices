@@ -1,14 +1,17 @@
 using System;
 using System.Windows.Forms;
+using SistemaDeRegistroDeDonaciones;
 
-namespace SistemaDeRegistroDeDonaciones
+namespace SistemaDonaciones
 {
-    internal static class Program
+    static class Program
     {
         [STAThread]
         static void Main()
         {
-            ApplicationConfiguration.Initialize();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
             Application.Run(new HomeForm());
         }
     }

@@ -19,6 +19,8 @@ namespace SistemaDeRegistroDeDonaciones
             this.FormBorderStyle = FormBorderStyle.None;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.Size = new Size(800, 600);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
         }
 
         private void panel_Paint(object sender, PaintEventArgs e)

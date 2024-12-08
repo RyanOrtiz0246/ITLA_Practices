@@ -17,6 +17,7 @@ namespace SistemaDeRegistroDeDonaciones
             this.FormBorderStyle = FormBorderStyle.None;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.Size = new Size(800, 600);
+            this.AutoSize = false;
 
             this.Controls.Add(panelHeader);
             this.Controls.Add(panel);
@@ -32,7 +33,7 @@ namespace SistemaDeRegistroDeDonaciones
             Panel panelHeader = new Panel
             {
                 Name = "panelHeader",
-                Size = new Size(this.Height, 50), // Ancho: 200 px; Altura: igual a la ventana
+                Size = new Size(this.Height, 50),
                 Dock = DockStyle.Top,
                 BackColor = Color.DarkSlateBlue
             };
@@ -56,7 +57,7 @@ namespace SistemaDeRegistroDeDonaciones
             Panel panel = new Panel
             {
                 Name = "panel",
-                Size = new Size(300, this.Height), // Ancho: 200 px; Altura: igual a la ventana
+                Size = new Size(300, this.Height),
                 Dock = DockStyle.Left,
                 BackColor = Color.DarkSlateGray
             };
