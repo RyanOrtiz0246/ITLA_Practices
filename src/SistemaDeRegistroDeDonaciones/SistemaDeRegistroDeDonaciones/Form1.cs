@@ -65,7 +65,6 @@ namespace SistemaDeRegistroDeDonaciones
 
         private void SetBackgroundImage()
         {
-            // Configurar la imagen de fondo en el Panel Lateral
             panel.BackgroundImage = Image.FromFile(@"C:\Users\ryan1\OneDrive\Imágenes\Donaciones.jpg");
             panel.BackgroundImageLayout = ImageLayout.Stretch;
         }

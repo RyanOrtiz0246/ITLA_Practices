@@ -28,7 +28,7 @@ namespace SistemaDeRegistroDeDonaciones
             Panel panel1Header = new Panel
             {
                 Name = "panel1",
-                Size = new Size(this.Height, 50), // Ancho: 200 px; Altura: igual a la ventana
+                Size = new Size(this.Height, 50),
                 Dock = DockStyle.Top,
                 BackColor = Color.DarkSlateBlue
             };
